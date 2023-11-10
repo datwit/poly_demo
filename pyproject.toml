@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "demo"
+version = "0.1.0"
+description = ""
+authors = ["Yoel Benitez Fonseca <ybenitezf@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "my_demo/my_example_component",from = "components"},
+    {include = "my_demo/my_example_base",from = "bases"},
+    {include = "my_demo/my_example_base1",from = "bases"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
